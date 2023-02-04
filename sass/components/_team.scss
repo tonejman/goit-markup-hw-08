@@ -1,0 +1,69 @@
+.team {
+  background-color: $backgroundTeamColor;
+  &__name {
+    padding: 30px 0;
+  }
+  &__image {
+    display: block;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 0.03em;
+    color: $secondaryColor;
+  }
+  &__job-name {
+    font-size: 14px;
+    line-height: 1.17;
+  }
+  &__desinger-name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.17;
+    color: $secondaryColor;
+    margin-bottom: 10px;
+  }
+  &__review {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    gap: 30px;
+  }
+  &__list {
+    text-align: center;
+    box-shadow: $teamBackgroundColor;
+    border-radius: 0px 0px 4px 4px;
+    background-color: $jointColor;
+  }
+  &__icon-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  &__icon-item:not(:last-child) {
+    margin-right: 10px;
+  }
+  &__icon-link {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: fill 250ms;
+    transition: background-color 250ms;
+    transition-timing-function: $slowChange;
+    border-radius: 50%;
+    &:hover,
+    &:focus {
+      background-color: $decorColor;
+      --color5: #ffffff;
+      fill: var(--color5);
+      transition: fill 250ms;
+      transition: background-color 250ms;
+      transition-timing-function: $slowChange;
+    }
+  }
+}

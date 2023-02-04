@@ -1,0 +1,45 @@
+body{
+    font-family: $primaryFont;
+    color: $primaryColor;
+    margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  padding-bottom: 0;
+}
+
+section {
+  padding: 94px 0;
+}
+
+.button {
+  background-color: $decorColor;
+  color: $jointColor;
+  font-size: 16px;
+  line-height: 1.87;
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+}

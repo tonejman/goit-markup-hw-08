@@ -1,0 +1,73 @@
+.cards {
+  padding-top: 50px;
+  &__set {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+.card {
+  &__image {
+    display: block;
+  }
+  &__item {
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    padding: 20px 24px 20px 24px;
+    border-color: $borderCardColor;
+    background-color: $jointColor;
+    position: relative;
+    overflow: hidden;
+  }
+  &__name {
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+    color: $secondaryColor;
+  }
+  &__range {
+    position: relative;
+    overflow: hidden;
+    background-color: $jointColor;
+    &:hover,
+    &:focus {
+      box-shadow: $buttonShadowColor;
+      border-radius: 0px 0px 4px 4px;
+      cursor: pointer;
+      transition: box-shadow $slowChange;
+    }
+  }
+  &__portfolio-overlay {
+    display: block;
+    width: 100%;
+    height: 294px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding: 49px 24px 49px 45px;
+    background-color: $backgroundCardColor;
+    transform: translateY(100%);
+    transition: transform $slowChange;
+  }
+  &__range:hover &__portfolio-overlay,
+  &__portfolio-overlay:focus {
+    transform: translateY(0);
+    visibility: visible;
+  }
+  &__portfolio-text {
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: $jointColor;
+  }
+}

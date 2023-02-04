@@ -1,0 +1,31 @@
+.main-buttons {
+  display: flex;
+  padding-bottom: 0;
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+  }
+  &__item {
+    letter-spacing: 0.03em;
+    border: 0;
+    border-radius: 4px;
+    padding: 6px 22px;
+    cursor: pointer;
+    color: $secondaryColor;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    &:hover {
+      background-color: $decorColor;
+      color: $jointColor;
+      box-shadow: $buttonShadowColor;
+      border-radius: 0px 0px 4px 4px;
+      transition: background-color $slowChange, color $slowChange,
+        box-shadow $slowChange;
+    }
+  }
+}
+
+

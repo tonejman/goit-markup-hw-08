@@ -1,0 +1,173 @@
+.modal {
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  height: 581px;
+  background-color: $jointColor;
+  position: absolute;
+  transition-property: visibility, opacity, transform;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+  display: block;
+  box-shadow: $modalShadow;
+  border-radius: 4px;
+  transition: opacity $slowChange, visibility $slowChange;
+  &__close-window {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: $jointColor;
+    border: 1px solid $modalCloseBtn;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__title {
+    color: $blackFontColor;
+    font-size: 20px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-top: 40px;
+    margin-bottom: 12px;
+  }
+  &__form {
+    margin: 0 40px;
+  }
+  &__input {
+    height: 40px;
+    padding-left: 40px;
+    border: 1px solid $borderModalColor;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    &-choice {
+      appearance: none;
+      position: relative;
+      left: -5px;
+      cursor: pointer;
+      width: 15px;
+      height: 14px;
+      border-radius: 2px;
+      &:checked + .modal__label-choice::before {
+        background-color: $decorColor;
+        border-color: $decorColor;
+      }
+      & .modal__label-choice {
+        position: relative;
+        color: $primaryColor;
+      }
+    }
+    &:focus-within + .modal__icon {
+      fill: $decorColor;
+      transition: outline $slowChange;
+    }
+  }
+  &__label {
+    font-size: 12px;
+    line-height: 1.17;
+    margin-bottom: 4px;
+    &-link {
+      display: inline-block;
+      color: $decorColor;
+    }
+    &-choice::before {
+      display: block;
+      content: "";
+      width: 16px;
+      height: 15px;
+      border: 2px solid $secondaryColor;
+      border-radius: 2px;
+      position: absolute;
+      left: 16px;
+      top: 4px;
+      cursor: pointer;
+    }
+  }
+  &-textarea {
+    height: 120px;
+    resize: none;
+    margin-bottom: 10px;
+    padding: 12px 16px;
+    border-radius: 4px;
+    border: 1px solid $borderModalColor;
+    &::placeholder {
+      color: $placeholderModalColor;
+      font-size: 12px;
+      line-height: 1.17;
+    }
+  }
+  &-button {
+    position: absolute;
+    padding: 10px 76px;
+    left: 164px;
+    bottom: 40px;
+    background-color: $decorColor;
+    border-radius: 4px;
+    border: 0;
+    color: $jointColor;
+    font-size: 16px;
+    line-height: 1.87;
+    transition: $slowChange;
+    &:hover,
+    &:focus {
+      filter: $underShadowColor;
+      transition: filter $slowChange;
+      cursor: pointer;
+    }
+  }
+  &__field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &:nth-child(4) {
+    margin-bottom: 10px;
+  }
+  &:nth-child(5) {
+    flex-direction: row;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+  &:nth-child(1) .modal__icon,
+  &:nth-child(2) .modal__icon,
+  &:nth-child(3) .modal__icon {
+    position: absolute;
+    top: 28px;
+    left: 13px;
+  }
+  &:nth-child(5) .modal__icon {
+    position: absolute;
+    top: 7px;
+    left: 19px;
+    cursor: pointer;
+  }
+}
+}
+
+.modal__input:focus-within,
+.modal-textarea:focus-within {
+  outline: 1px solid $decorColor;
+  transition: outline $slowChange;
+}
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: $underBackdropColor;
+  transition-duration: 500ms;
+}
+
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}

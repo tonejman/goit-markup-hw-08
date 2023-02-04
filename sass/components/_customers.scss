@@ -1,0 +1,47 @@
+.customers {
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 0.03em;
+    color: $secondaryColor;
+  }
+  &__logo {
+    display: flex;
+    height: 92px;
+    width: 170px;
+    --color: #afb1b8;
+    fill: var(--color);
+    border: 1px solid $customersLogoColor;
+    border-radius: 4px;
+    transition: 250ms;
+    transition-timing-function: $slowChange;
+    &:hover,
+    &:focus {
+      border: 1px solid;
+      border-color: $decorColor;
+      cursor: pointer;
+      --color: #2196f3;
+      transition: 250ms;
+      transition-timing-function: $slowChange;
+    }
+  }
+  &__icon {
+    width: 50%;
+    height: 50%;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    list-style-type: none;
+  }
+}

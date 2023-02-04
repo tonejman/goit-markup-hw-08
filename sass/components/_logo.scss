@@ -1,0 +1,23 @@
+.logo{
+  &__link {
+    text-decoration: none;
+    letter-spacing: 0.03em;
+  }
+  &__part-one {
+    font-family: $secondaryFont;
+    font-size: 26px;
+    letter-spacing: 0.03em;
+    color: $decorColor;
+  }
+  &__part-two--header {
+    font-family: $secondaryFont;
+    font-size: 26px;
+    letter-spacing: 0.03em;
+    color: $blackFontColor;
+  }
+  &__part-two--footer {
+    font-family: $secondaryFont;
+    font-size: 26px;
+    color: $jointColor;
+  }
+}
