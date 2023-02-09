@@ -15,7 +15,6 @@ ul {
   max-width: 480px;
   margin: 0 auto;
   padding: 0 15px;
-  margin: 0 auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1278,6 +1277,9 @@ section {
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .main-buttons__item {
   letter-spacing: 0.03em;

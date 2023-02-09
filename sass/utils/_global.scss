@@ -1,7 +1,7 @@
-body{
-    font-family: $primaryFont;
-    color: $primaryColor;
-    margin: 0 auto;
+body {
+  font-family: $primaryFont;
+  color: $primaryColor;
+  margin: 0 auto;
 }
 
 ul {
@@ -11,19 +11,10 @@ ul {
 }
 
 .container {
-  // max-width: 1200px;
-
-width: 100%;
-max-width: 480px;
-margin: 0 auto;
-padding: 0 15px;
-
-
-
-  // width: 100%;
-  // max-width: 480px;
+  width: 100%;
+  max-width: 480px;
   margin: 0 auto;
-  // padding: 0 15px;
+  padding: 0 15px;
   align-items: center;
   @include tablet {
     max-width: 768px;
@@ -43,14 +34,7 @@ h5 {
   padding: 0;
 }
 
-.section {
- 
-  //   padding: 94px 0;
- 
-}
-
-
-.welcome-section{
+.welcome-section {
   @include tablet {
     padding: 60px 0;
   }
@@ -58,8 +42,6 @@ h5 {
     padding: 94px 0;
   }
 }
-
-
 
 section {
   padding: 94px 0;
