@@ -1,4 +1,9 @@
 .work{
+  display: none;
+  @include desktop {
+display: contents;
+padding-bottom: 94px;
+  
   &__title {
     font-weight: 700;
     font-size: 36px;
@@ -30,4 +35,5 @@
         padding: 27px 0;
       }
   }
+}
 }

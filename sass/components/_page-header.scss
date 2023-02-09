@@ -9,60 +9,146 @@
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  padding: 0 15px;
+
+  @include tablet {
+    margin-right: 101px;
+  }
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
 }
 
 .contact-header {
-  display: flex;
+  display: none;
   & .item:not(:last-child) {
     margin-right: 30px;
   }
-  &__link {
-    text-decoration: none;
-    letter-spacing: 0.03em;
-    color: $primaryColor;
-    &:hover,
-    &:focus {
-      color: $decorColor;
-      transition: color $slowChange;
+
+  @include tablet {
+    & {
+      display: flex;
+      font-size: 12px;
+      letter-spacing: 0.02em;
+      line-height: 1.17;
+      flex-direction: column;
+      align-content: center;
+      margin: 21px 0 21px -18px;
+    }
+
+    &__link {
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      color: $primaryColor;
+      &:hover,
+      &:focus {
+        color: $decorColor;
+        transition: color $slowChange;
+      }
+    }
+    &__list {
+      display: flex;
+
+      flex-direction: column;
+      align-content: center;
+      margin: 21px 0 21px -18px;
+    }
+
+    &__item {
+      display: flex;
+      height: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      &:hover,
+      &:focus {
+        --color3: #2196f3;
+        fill: var(--color3);
+        cursor: pointer;
+        transition: fill $slowChange;
+      }
+      &:hover > .contact-header__link,
+      &:focus > .contact-header__link {
+        color: $decorColor;
+        transition: color $slowChange;
+      }
+      & > .contact-header__icon:hover {
+        --color3: #2196f3;
+        fill: var(--color3);
+        transition: fill $slowChange;
+      }
+    }
+    &__icon {
+      display: flex;
+      margin-right: 10px;
+      height: 100%;
     }
   }
-  &__list {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    font-weight: 500;
-    font-size: 14px;
-    letter-spacing: 0.02em;
-    line-height: 1.17;
-    list-style: none;
-    & .contact-header__item:not(:last-child) {
-      margin-right: 30px;
+
+  @include desktop {
+    & {
+      display: flex;
+      flex-direction: row;
     }
-  }
-  &__item {
-    display: flex;
-    height: 100%;
-    &:hover,
-    &:focus {
-      --color3: #2196f3;
-      fill: var(--color3);
-      cursor: pointer;
-      transition: fill $slowChange;
+
+    &__link {
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      color: $primaryColor;
+      &:hover,
+      &:focus {
+        color: $decorColor;
+        transition: color $slowChange;
+      }
     }
-    &:hover > .contact-header__link,
-    &:focus > .contact-header__link {
-      color: $decorColor;
-      transition: color $slowChange;
+    &__list {
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      padding: 0;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      line-height: 1.17;
+      list-style: none;
+      & .contact-header__item:not(:last-child) {
+        margin-right: 30px;
+        margin-bottom: 0;
+      }
     }
-    & > .contact-header__icon:hover {
-      --color3: #2196f3;
-      fill: var(--color3);
-      transition: fill $slowChange;
+
+    &__item {
+      display: flex;
+      height: 100%;
+    
+      &:hover,
+      &:focus {
+        --color3: #2196f3;
+        fill: var(--color3);
+        cursor: pointer;
+        transition: fill $slowChange;
+      }
+      &:hover > .contact-header__link,
+      &:focus > .contact-header__link {
+        color: $decorColor;
+        transition: color $slowChange;
+      }
+      & > .contact-header__icon:hover {
+        --color3: #2196f3;
+        fill: var(--color3);
+        transition: fill $slowChange;
+      }
     }
-  }
-  &__icon {
-    display: flex;
-    margin-right: 10px;
-    height: 100%;
+    &__icon {
+      display: flex;
+      margin-right: 10px;
+      height: 100%;
+    }
   }
 }

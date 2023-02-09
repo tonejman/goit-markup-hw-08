@@ -11,9 +11,26 @@ ul {
 }
 
 .container {
-  max-width: 1200px;
+  // max-width: 1200px;
+
+width: 100%;
+max-width: 480px;
+margin: 0 auto;
+padding: 0 15px;
+
+
+
+  // width: 100%;
+  // max-width: 480px;
   margin: 0 auto;
+  // padding: 0 15px;
   align-items: center;
+  @include tablet {
+    max-width: 768px;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
 }
 
 p,
@@ -27,8 +44,22 @@ h5 {
 }
 
 .section {
-  padding-bottom: 0;
+ 
+  //   padding: 94px 0;
+ 
 }
+
+
+.welcome-section{
+  @include tablet {
+    padding: 60px 0;
+  }
+  @include desktop {
+    padding: 94px 0;
+  }
+}
+
+
 
 section {
   padding: 94px 0;

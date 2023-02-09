@@ -5,7 +5,14 @@
   }
   &__image {
     display: block;
+    width: 100%;
+    height: auto;
+    &-basic {
+      width: 100%;
+      height: auto;
+    }
   }
+
   &__title {
     font-weight: 700;
     font-size: 36px;
@@ -28,6 +35,7 @@
   }
   &__review {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     letter-spacing: 0.03em;
     gap: 30px;
@@ -64,6 +72,14 @@
       transition: fill 250ms;
       transition: background-color 250ms;
       transition-timing-function: $slowChange;
+    }
+  }
+
+  @include desktop {
+    margin-top: 94px;
+    &__list {
+      max-width: 270px;
+      flex-basis: calc((100% - 3 * 30px) / 4);
     }
   }
 }

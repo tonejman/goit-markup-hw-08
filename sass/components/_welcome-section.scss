@@ -1,13 +1,14 @@
 .welcome-section {
   display: flex;
   text-align: center;
-  padding: 200px 0;
+  // padding: 200px 0;
   background-color: $backgroundBlockColor;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4) 0%,
       rgba(47, 48, 58, 0.4) 50%
     ),
-    url(../images/designers-in-the-office.jpg);
+    url(../images/designers-in-the-office-mobile.jpg);
+  // url(../images/designers-in-the-office-desktop.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -21,6 +22,28 @@
     margin-bottom: 30px;
     letter-spacing: 0.06em;
     color: $jointColor;
+  }
+  @include tablet {
+   padding: 200px 0;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4) 0%,
+        rgba(47, 48, 58, 0.4) 50%
+      ),
+      url(../images/designers-in-the-office-tablet.jpg);
+
+    // padding: 118px 186px;
+  }
+
+  @include desktop {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 200px 0;
+
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4) 0%,
+        rgba(47, 48, 58, 0.4) 50%
+      ),
+      url(../images/designers-in-the-office-desktop.jpg);
   }
 }
 

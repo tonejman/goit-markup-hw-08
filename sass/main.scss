@@ -1,3 +1,4 @@
+@use "./utils/mixins" as *;
 @import "./utils/variables";
 @import "./utils/global";
 @import "./components/page-header";
@@ -12,3 +13,4 @@
 @import "./components/modal";
 @import "./components/main-buttons";
 @import "./components/cards";
+@import "./components/menu-mobile";
