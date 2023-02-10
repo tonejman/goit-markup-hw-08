@@ -2,7 +2,13 @@
   display: flex;
   flex: 1;
   align-items: center;
-  margin-left: 93px;
+  margin-left: 50px;
+
+@include tablet {
+    margin-left: 93px;
+  }
+
+
 }
 
 .header-nav {
@@ -13,9 +19,15 @@
   letter-spacing: 0.02em;
   line-height: 1.17;
   list-style: none;
-  &__item:not(:last-child) {
-    margin-right: 46px;
+
+  &__item {
+  margin-right: 46px;
   }
+
+  
+  // &__item:not(:last-child) {
+  // }
+  
   &__link {
     color: $secondaryColor;
   }

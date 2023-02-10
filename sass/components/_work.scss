@@ -1,26 +1,37 @@
-.work{
+.work {
   display: none;
   @include desktop {
-display: contents;
-padding-bottom: 94px;
-  
-  &__title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    margin-bottom: 50px;
-    letter-spacing: 0.03em;
-    color: $secondaryColor;
-  }
+    display: contents;
+    padding-bottom: 94px;
+
+    &__title {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 1.17;
+      text-align: center;
+      margin-bottom: 50px;
+      letter-spacing: 0.03em;
+      color: $secondaryColor;
+    }
     &__images {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-  }
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    &__image {
+      display: block;
+      width: 100%;
+      height: auto;
+      &-basic {
+        width: 100%;
+        height: auto;
+      }
+    }
+
     &__card {
-    position: relative;
-  }
+      position: relative;
+    }
     &__label {
       width: 100%;
       background-color: $workLabelColor;
@@ -34,6 +45,6 @@ padding-bottom: 94px;
         line-height: 1.17;
         padding: 27px 0;
       }
+    }
   }
-}
 }

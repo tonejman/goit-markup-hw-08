@@ -11,9 +11,7 @@
   height: 100%;
   padding: 0 15px;
 
-  @include tablet {
-    margin-right: 101px;
-  }
+  
 
   @include desktop {
     display: flex;

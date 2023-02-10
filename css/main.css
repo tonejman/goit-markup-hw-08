@@ -84,11 +84,6 @@ section {
   height: 100%;
   padding: 0 15px;
 }
-@media screen and (min-width: 768px) {
-  .headline {
-    margin-right: 101px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .headline {
     display: -webkit-box;
@@ -266,7 +261,12 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 93px;
+  margin-left: 50px;
+}
+@media screen and (min-width: 768px) {
+  .menu-nav {
+    margin-left: 93px;
+  }
 }
 
 .header-nav {
@@ -282,7 +282,7 @@ section {
   line-height: 1.17;
   list-style: none;
 }
-.header-nav__item:not(:last-child) {
+.header-nav__item {
   margin-right: 46px;
 }
 .header-nav__link {
@@ -352,13 +352,19 @@ section {
   display: flex;
   text-align: center;
   background-color: #2f303a;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), color-stop(50%, rgba(47, 48, 58, 0.4))), url(../images/designers-in-the-office-mobile.jpg);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 50%), url(../images/designers-in-the-office-mobile.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), color-stop(50%, rgba(47, 48, 58, 0.4))), url(../images/designers-in-the-office-mobile-x1.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 50%), url(../images/designers-in-the-office-mobile-x1.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   max-width: 1600px;
   margin: 0 auto;
+}
+@media (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .welcome-section {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), color-stop(50%, rgba(47, 48, 58, 0.4))), url(../images/designers-in-the-office-mobile-x2.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 50%), url(../images/designers-in-the-office-mobile-x2.jpg);
+  }
 }
 .welcome-section__title {
   font-weight: 900;
@@ -372,8 +378,14 @@ section {
 @media screen and (min-width: 768px) {
   .welcome-section {
     padding: 200px 0;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), color-stop(50%, rgba(47, 48, 58, 0.4))), url(../images/designers-in-the-office-tablet.jpg);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 50%), url(../images/designers-in-the-office-tablet.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), color-stop(50%, rgba(47, 48, 58, 0.4))), url(../images/designers-in-the-office-tablet-x1.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 50%), url(../images/designers-in-the-office-tablet-x1.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .welcome-section {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), color-stop(50%, rgba(47, 48, 58, 0.4))), url(../images/designers-in-the-office-tablet-x2.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 50%), url(../images/designers-in-the-office-tablet-x2.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -381,8 +393,14 @@ section {
     max-width: 1600px;
     margin: 0 auto;
     padding: 200px 0;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), color-stop(50%, rgba(47, 48, 58, 0.4))), url(../images/designers-in-the-office-desktop.jpg);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 50%), url(../images/designers-in-the-office-desktop.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), color-stop(50%, rgba(47, 48, 58, 0.4))), url(../images/designers-in-the-office-desktop-x1.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 50%), url(../images/designers-in-the-office-desktop-x1.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .welcome-section {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), color-stop(50%, rgba(47, 48, 58, 0.4))), url(../images/designers-in-the-office-desktop-x2.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 50%), url(../images/designers-in-the-office-desktop-x2.jpg);
   }
 }
 
@@ -490,6 +508,15 @@ section {
         -ms-flex-pack: center;
             justify-content: center;
     gap: 30px;
+  }
+  .work__image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .work__image-basic {
+    width: 100%;
+    height: auto;
   }
   .work__card {
     position: relative;
@@ -1215,7 +1242,7 @@ section {
 .modal__field:nth-child(5) .modal__icon {
   position: absolute;
   top: 7px;
-  left: 19px;
+  left: 34px;
   cursor: pointer;
 }
 @media screen and (min-width: 1200px) {
@@ -1235,6 +1262,9 @@ section {
   }
   .modal__label-choice::before {
     left: 16px;
+  }
+  .modal__field:nth-child(5) .modal__icon {
+    left: 19px;
   }
 }
 
@@ -1391,7 +1421,7 @@ section {
 
 @media (max-width: 480px) {
   .menu-nav,
-.contact-header {
+  .contact-header {
     display: none;
   }
 }
@@ -1421,7 +1451,7 @@ section {
 
 @media (min-width: 481px) {
   .header-toggle,
-.mobile {
+  .mobile {
     display: none;
   }
 }
