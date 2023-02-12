@@ -50,7 +50,13 @@
   &__item {
     display: flex;
     flex-wrap: wrap;
-    width: 170px;
+    // width: 170px;
+width: 100%;
+height: auto;
+justify-content: center;
+
+
+
   }
 
   @include tablet {
