@@ -50,13 +50,10 @@
   &__item {
     display: flex;
     flex-wrap: wrap;
-    // width: 170px;
-width: 100%;
-height: auto;
-justify-content: center;
-
-
-
+    width: 170px;
+    // height: auto;
+    // justify-content: center;
+    flex-basis: calc((100% - 30px) / 2);
   }
 
   @include tablet {
@@ -64,6 +61,7 @@ justify-content: center;
     &__item {
       flex-basis: calc((100% - 2 * 30px) / 3);
       text-align: left;
+      //  width: 170px;
     }
   }
   @include desktop {
